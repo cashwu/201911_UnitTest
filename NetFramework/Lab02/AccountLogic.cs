@@ -10,7 +10,7 @@ namespace Lab02
 
             var member = accountDa.GetMemberForLogin(account);
             var encryptedPassword = new Cryptography().CashSha(password);
-            var isValid = member.Password != encryptedPassword;
+            var isValid = member.Password == encryptedPassword;
 
             if (isValid)
             {
